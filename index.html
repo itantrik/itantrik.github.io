@@ -24,6 +24,20 @@ function callbackFunction() {
     <script>
 window._pcq.push(['triggerOptIn',{subscriberSegment: 'homepage', modal: {text: 'Get instant alerts from our website. Please subscribe.', blackenBackground: true}}]);     
 </script>
+    <script>      
+window._pcq = window._pcq || [];
+_pcq.push(['subscriptionSuccessCallback',callbackFunctionOnSuccessfulSubscription]);
+function callbackFunctionOnSuccessfulSubscription(subscriberId, values) {
+    console.log('User got successfully subscribed.');
+    console.log(subscriberId); 
+
+    console.log(values.status);
+
+    console.log(values.message) 
+
+    console.log('Now you may run code which should be executed once user gets successfully subscribed.');
+}
+    </script>
     
 <style>
 p {
