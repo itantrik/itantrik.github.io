@@ -121,7 +121,7 @@ function addToAppropriateSegment() {
         _pcq.push(['addSubscriberToSegment', 'another_page']);
         console.log('User is subscribed to another_page');
     }
-    else if(window.location.href.indexOf("index") > -1) {
+    else if(window.location.host==="itantrik.github.io" && (window.location.pathname === "/" || window.location.pathname === "/index.html")) {
         _pcq.push(['addSubscriberToSegment', 'homepage']);
         console.log('User is subscribed to homepage');
     }
