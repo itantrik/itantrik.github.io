@@ -78,7 +78,7 @@ function callbackForAddToSegment(response) {
     }
 }
     </script>
--->
+
     <script>
         window._pcq = window._pcq || [];
 _pcq.push(['APIReady', callbackOnAPIReady]); //will execute callback function when PushCrew API is ready
@@ -107,6 +107,33 @@ function callbackForAddToSegment(response) {
     if(response === true) {
         console.log('User got added to the segment successfully. Now you may run any code you wish to execute after user gets added to segment successfully');
     }
+}
+    </script>
+    -->
+    <script>
+        window._pcq = window._pcq || [];
+_pcq.push(['APIReady', callbackOnAPIReady]); //will execute callback function when PushCrew API is ready
+
+_pcq.push(['subscriptionSuccessCallback',callbackOnSuccessfulSubscription]); //registers callback function to be called when user gets successfully subscribed
+
+function addToAppropriateSegment() {
+    if(window.location.href.indexOf("another_page") > -1) {
+        _pcq.push(['addSubscriberToSegment', 'another_page']);
+        console.log('User is subscribed to another_page');
+    }
+    else if(window.location.href.indexOf("index") > -1) {
+        _pcq.push(['addSubscriberToSegment', 'homepage']);
+        console.log('User is subscribed to homepage');
+    }
+   
+}
+
+function callbackOnAPIReady() {
+   addToAppropriateSegment();
+}
+
+function callbackOnSuccessfulSubscription(subscriberId, values) {
+   addToAppropriateSegment();
 }
     </script>
 </head>
