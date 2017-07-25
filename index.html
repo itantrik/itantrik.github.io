@@ -39,7 +39,7 @@ function callbackOnSuccessfulSubscription(subscriberId, values) {
    addToAppropriateSegment();
 }
     </script>
--->
+
     <script>
         window._pcq = window._pcq || [];
 
@@ -62,6 +62,11 @@ function callbackForRemoveFromSegment(response) {
         console.log('User got removed from the segment successfully. Now you may run any code you wish to execute after user gets removed from segment successfully');
     }
 }
+    </script>
+    -->
+    <script>
+        window._pcq = window._pcq || [];
+_pcq.push(['triggerOptOut']);
     </script>
 </head>
 <body>
