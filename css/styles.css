@@ -34,22 +34,7 @@ body, html {
   margin-bottom: 30px;
   font-family: "Open Sans", sans-serif;
 }
-.techsupport .information h1 {
-  color: #333;
-  font-size: 1.5rem;
-  padding: 0px 10px;
-  border-left: 3px solid #F03861;
-}
-.techsupport .information h3 {
-  color: #e0e0e0;
-  font-size: 1rem;
-  font-weight: 300;
-  padding: 0px 10px;
-  border-left: 3px solid #F03861;
-}
-.techsupport .information p {
-  padding: 10px 0px;
-}
+
 .techsupport ul {
   font-size: 0;
   list-style-type: none;
