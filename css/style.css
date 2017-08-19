@@ -21,8 +21,8 @@ h1 {
 .logo
 {
   text-align: center;
-  padding: 30px, 0;
-  position: relative;
+  position: absolute;
+  justify-content: center;
 }
 
 .login-form {
