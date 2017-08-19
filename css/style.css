@@ -18,6 +18,13 @@ h1 {
   font-size: 50px;
 }
 
+.logo
+{
+  text-align: center;
+  padding: 30px, 0;
+  position: relative;
+}
+
 .login-form {
   width: 350px;
   padding: 40px 30px;
