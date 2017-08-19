@@ -1,12 +1,3 @@
-//variables
-$background-purple: #EEEEEE;
-$subtle-white: #f9f9f9;
-$subtle-grey: #f2f2f2;
-$masked-grey: #333;
-$blue: #F03861;
-
-$open-sans: 'Open Sans', sans-serif;
-
 *,
 *:before,
 *:after {
@@ -17,99 +8,91 @@ $open-sans: 'Open Sans', sans-serif;
 
 body, html {
   height: 100%;
-  background-color: $background-purple;
+  background-color: #EEEEEE;
 }
 
-// page container
 .container {
   width: 100%;
   height: 100%;
 }
 
-// techsupport start
 .techsupport {
   width: 80%;
   margin: 5% auto 0 auto;
-  box-shadow: 0 4px 12px rgba(black, 0.1);
-  background-color: $subtle-white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
   max-width: 800px;
-  
-.slider {
+}
+.techsupport .slider {
   width: 100%;
   height: 300px;
-  background-color: $blue;
+  background-color: #F03861;
 }
-  
-.information {
+.techsupport .information {
   width: 100%;
   padding: 20px 50px;
   margin-bottom: 30px;
-  font-family: $open-sans;
-  
-  
-  p {
-    padding: 10px 0px;
-  }
+  font-family: "Open Sans", sans-serif;
 }
-  
-  ul {
-    font-size: 0;
-    list-style-type: none;
-    
-    // initial li
-    li {
-      font-family: $open-sans;
-      font-size: 1rem;
-      font-weight: 400;
-      color: $masked-grey;
-      
-      display: inline-block;
-      padding: 15px;
-      position: relative;
-      
-       // secondary ul
-        ul {
-          display: none;
-        }
-      
-      // initial li:hover
-      &:hover {
-        cursor: pointer;
-        background-color: $subtle-grey;
-        
-        // secondary ul visibility change
-        ul {
-          display: block;
-          margin-top: 15px;
-          
-          width: 200px;
-          left: 0;
-          
-          position: absolute;
-          
-          // secondary li
-          li {
-            display: block;
-            background-color: darken($subtle-white, 7%);
-            span {
-              float: right;
-              color: $subtle-white;
-              background-color: $blue;
-              padding: 2px 5px;
-              text-align: center;
-              font-size: .8rem;
-              border-radius: 3px;
-            }
-            
-            &:hover {
-              background-color: darken($subtle-white, 10%);
-              span {
-                background-color: darken($blue, 5%);
-              }
-            }
-          }
-        }
-      } 
-    }
-  }
+.techsupport .information h1 {
+  color: #333;
+  font-size: 1.5rem;
+  padding: 0px 10px;
+  border-left: 3px solid #F03861;
+}
+.techsupport .information h3 {
+  color: #e0e0e0;
+  font-size: 1rem;
+  font-weight: 300;
+  padding: 0px 10px;
+  border-left: 3px solid #F03861;
+}
+.techsupport .information p {
+  padding: 10px 0px;
+}
+.techsupport ul {
+  font-size: 0;
+  list-style-type: none;
+}
+.techsupport ul li {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #333;
+  display: inline-block;
+  padding: 15px;
+  position: relative;
+}
+.techsupport ul li ul {
+  display: none;
+}
+.techsupport ul li:hover {
+  cursor: pointer;
+  background-color: #f2f2f2;
+}
+.techsupport ul li:hover ul {
+  display: block;
+  margin-top: 15px;
+  width: 200px;
+  left: 0;
+  position: absolute;
+}
+.techsupport ul li:hover ul li {
+  display: block;
+  background-color: #e7e7e7;
+}
+.techsupport ul li:hover ul li span {
+  float: right;
+  color: #f9f9f9;
+  background-color: #F03861;
+  padding: 2px 5px;
+  text-align: center;
+  font-size: .8rem;
+  border-radius: 3px;
+}
+.techsupport ul li:hover ul li:hover {
+  background-color: #e0e0e0;
+}
+.techsupport ul li:hover ul li:hover span {
+  background-color: #ee204e;
 }
