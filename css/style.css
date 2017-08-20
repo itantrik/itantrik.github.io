@@ -18,23 +18,10 @@ h1 {
   font-size: 20px;
 }
 
-.logo
-{
-  width: 350px;
-  padding: 20px 4px;
-  background: #FFF;
-  -moz-border-radius: 0px;
-  -webkit-border-radius: 0px;
-  border-radius: 0px;
-  margin: auto;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 17%;
-}
+
 
 .login-form {
-  width: 350px;
+  width: 400px;
   padding: 40px 30px;
   background: #FFF;
   -moz-border-radius: 2px;
@@ -44,11 +31,11 @@ h1 {
   position: absolute;
   left: 0;
   right: 0;
-  top: 28%;
-  /*-moz-transform: translateY(-50%);
+  top: 50%;
+  -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);*/
+  transform: translateY(-50%);
 }
 
 .form-group {
