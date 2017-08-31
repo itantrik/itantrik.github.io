@@ -18,7 +18,7 @@
 _pcq.push(['APIReady', callbackOnAPIReady]); //will execute callback function when PushCrew API is ready
 
 function callbackOnAPIReady() {
-   _pcq.push(['addSubscriberToSegment', 'another', callbackForAddToSegment]);
+   
     _pcq.push(['removeSubscriberFromSegment', 'home', callbackForRemoveFromSegment]);  
  function callbackForRemoveFromSegment(response){
  }
