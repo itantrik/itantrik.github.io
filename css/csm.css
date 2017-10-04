@@ -1,0 +1,52 @@
+.header {
+column-count: 3;
+column-rule: 2px solid black;
+column-gap: 40px;
+float:center;
+font-size: 30px;
+width:1400px;
+border: 3px solid blue;
+color:brown;
+text-align: center;
+margin:1em auto;
+border-radius: 15px;
+ 
+}
+ 
+.floating-box {
+     
+    width: 300px;
+    height: 100px;
+    padding: 20px;
+    margin: 2em auto;
+    border: 3px solid blue;
+    text-align: center;  
+    border-radius: 15px;
+    color:brown;
+    display: inline-block;
+   
+}
+ 
+.bigger-box {
+    float: left;
+    width: 270px;
+    height: 220px;
+    border: 3px solid blue;
+    text-align: center; 
+    padding-bottom: 50px;
+    border-radius: 15px;
+    color:brown;
+ 
+}
+ 
+.footer-box {
+ 
+float:left;
+width:1100px;
+height:120px;
+border: 3px solid blue;
+text-align: center; 
+border-radius: 15px;
+margin:0.5em;
+color:brown;
+}
