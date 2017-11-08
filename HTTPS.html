@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript">
-    (function(p,u,s,h){
+ (function(p,u,s,h){
         p._pcq=p._pcq||[];
         p._pcq.push(['_currentTime',Date.now()]);
         p._pcq.push(['noTrigger',true]); 
@@ -14,6 +15,7 @@
         h=u.getElementsByTagName('script')[0];
         h.parentNode.insertBefore(s,h);
     })(window,document);
+</script>
     </script>
     <title>This is a demopage!!!</title>
     <style type="text/css">
@@ -36,7 +38,7 @@
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
-    width: 38%; /* Could be more or less, depending on screen size */
+    width: 44%; /* Could be more or less, depending on screen size */
 }
 
 /* The Close Button */
@@ -47,18 +49,16 @@
     font-weight: bold;
 }
 
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
+.close:hover {
     cursor: pointer;
 }
 </style>
 
 </head>
 <body>
-<h1> This is just a demopage</h1>
-
+<h1>  This is just a demopage</h1>
+<h2>  for PushCrew Consent form </h2>
+<h3>  opt-in Box</h3>
 
 
 <!-- The Modal -->
@@ -67,25 +67,15 @@
   <!-- Modal content -->
   <div class="modal-content">
     <span class="close" id="close" onClick="modal.style.display = 'none';">&times;</span>
-    <h2 align="center">Click Allow to get awesome notifications from PushCrew</h2>
-    <h3><a href="https://pushcrew.com/terms-conditions/"> Terms and Conditions </a> </h3>
-    <p>
-        Quia doloremque dolores repellendus magnam quia aut natus. Fugit quibusdam pariatur illum doloremque voluptatibus debitis sit. Itaque sint aut optio ut voluptatem.
-Sunt rerum quis voluptas occaecati. Dignissimos dolor itaque omnis quia natus. Quia rerum consequuntur et. Ad magni id velit dolor. Explicabo animi minus a in est tenetur ut quia.
-Ex consequatur quibusdam repudiandae velit. Sit placeat et fugiat sit et recusandae. Esse minus et dolorem. Molestiae nihil nemo ut reprehenderit qui dolor.
-Sapiente harum ab dolorem nam. At aut voluptates dolore a. Aut temporibus voluptatem est consequuntur corrupti rerum qui ut.
-Magni aut qui ut saepe numquam eos. Dolor dolorem omnis tempora perspiciatis et dolore. Provident incidunt minima excepturi harum omnis eum molestiae.
+    <h2>Click Allow to get awesome notifications from PushCrew</h2>
+<p>
+
+    <input type="checkbox" id="check" onchange="document.getElementById('yes').disabled = !this.checked;"><b> I agree to all the <a href="https://pushcrew.com/terms-conditions/" target="_blank">Terms & Conditions</a> </b>
+    </p>
+<p>
+<button id="yes" type="button" class="btn btn-success" onClick="_pcq.push(['triggerOptIn']);
+    document.getElementById('myModal').style.display = 'none';" style="padding: 8px 20px;" disabled>Allow</button>
 </p>
-<p align=center>
-
-    <input type="checkbox" id="check" onchange="document.getElementById('yes').disabled = !this.checked;"><b> Accept T&C </b>
-    </p>
-<p align=center>
-<button id="yes" onClick="_pcq.push(['triggerOptIn']);
-    document.getElementById('myModal').style.display = 'none';" disabled style="width:100px;height:40px;font-size:18px" align="center">Allow</button>
-
-
-    </p>
 
   </div>
 
@@ -106,9 +96,7 @@ function callbackFunction() {
     }
 
 </script>
-
+</script>
 
 </body>
 </html>
-
-
