@@ -110,21 +110,97 @@
     white-space: nowrap !important;
 }
 
+
+
+
+
+
+
 </style>
+
+
+
+
+
+<!--    <style type="text/css">
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: absolute; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #F0EFF0;
+    margin: auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 44%; /* Could be more or less, depending on screen size */
+}*/
+
+    
+</style>
+-->
 
 </head>
 <body>
 <h1>  This is just a demopage</h1>
-<h2>  for Timberland PushCrew Consent form </h2>
+<h2>  for PushCrew Consent form </h2>
 <h3>  opt-in Box</h3>
 
+
+<!-- The Modal 
+<div id="myModal" class="modal">
+
+  <!-- Modal content
+  <div class="modal-content">
+    <h2>Click Allow to get awesome notifications from PushCrew</h2>
+<div>
+</p>
+</div>
+<p>
+    <input type="checkbox" id="check" onchange="document.getElementById('yes').disabled = !this.checked;"><b> I agree to all the <a href="https://pushcrew.com/terms-conditions/" target="_blank">Terms & Conditions</a> </b>
+    </p>
+<p>
+<button id="no" type="button" class="btn btn-success" onClick="modal.style.display = 'none';" style="padding: 8px 20px;">Don't Allow</button>
+    <button id="yes" type="button" class="btn btn-success" onClick="_pcq.push(['triggerOptIn']);
+    document.getElementById('myModal').style.display = 'none';" style="padding: 8px 20px;" disabled>Allow</button>
+</p>
+
+  </div>
+
+</div>
+
+<script>
+// Get the modal
+
+var modal = document.getElementById('myModal');
+
+//Check for already subscribed
+
+_pcq.push(['APIReady', callbackFunction]);
+function callbackFunction() {
+    if (!pushcrew.subscriberId) {
+               document.getElementById('myModal').style.display = "block";
+        }
+    }
+
+</script>
+-->
 <div id="pushcrew-modal" class="pushcrew-chrome-style-notification pushcrew-chrome-style-notification-safari" hidden>
     <div class="pushcrew-safari-notification-inner-wrapper">
-        <div class="pushcrew-notification-image-wrapper-safari"><img style="height:65px; width:65px;" src="images/timberland.png">
+        <div class="pushcrew-notification-image-wrapper-safari"><img style="height:65px; width:65px;" src="/images/timberland.png">
         </div>
         <div class="pushcrew-text-wrapper-safari"><span class="pushcrew-notification-title-safari">The website Timberland would like to send you push notifications.</span>
             <p class="pushcrew-notification-message-safari">Notifications can be turned off anytime from browser settings.</p>
-    <input type="checkbox" id="check" onchange="document.getElementById('yes').disabled = !this.checked;"><b> I agree to all the <a href="https://pushcrew.com/terms-conditions/" target="_blank">Terms & Conditions</a> </b> <p>
+    <input type="checkbox" id="check" onchange="document.getElementById('yes').disabled = !this.checked;"> I agree to all the <a href="https://pushcrew.com/terms-conditions/" target="_blank">Terms & Conditions</a> </a>  <p>
         </div>
         <div style="clear: both;">
             <div class="pushcrew-button-wrapper">
