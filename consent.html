@@ -16,7 +16,18 @@
         h.parentNode.insertBefore(s,h);
     })(window,document);
 </script>
-    
+    <script>
+
+//Check for already subscribed
+
+_pcq.push(['APIReady', callbackFunction]);
+function callbackFunction() {
+    if (!pushcrew.subscriberId) {
+               document.getElementById('pushcrew-modal').style.display = "block";
+        }
+    }
+
+</script>
     <title>This is a demopage!!!</title>
 <style type="text/css">
 .pushcrew-chrome-style-notification-safari {
@@ -151,6 +162,7 @@
 
 </head>
 <body>
+    <div class="container-fluid">
 <h1>  This is just a demopage</h1>
 <h2>  for PushCrew Consent form </h2>
 <h3>  opt-in Box</h3>
@@ -200,7 +212,7 @@ function callbackFunction() {
         </div>
         <div class="pushcrew-text-wrapper-safari"><span class="pushcrew-notification-title-safari">The website Timberland would like to send you push notifications.</span>
             <p class="pushcrew-notification-message-safari">Notifications can be turned off anytime from browser settings.</p>
-    <input type="checkbox" id="check" onchange="document.getElementById('yes').disabled = !this.checked;" style="position: relative;" > I agree to all the <a href="https://pushcrew.com/terms-conditions/" target="_blank">Terms & Conditions</a> </a>  <p>
+    <input type="checkbox" id="check" onchange="document.getElementById('yes').disabled = !this.checked;"><b> I agree to all the <a href="https://pushcrew.com/terms-conditions/" target="_blank">Terms & Conditions</a> </b> <p></p>
         </div>
         <div style="clear: both;">
             <div class="pushcrew-button-wrapper">
@@ -213,6 +225,8 @@ function callbackFunction() {
         </div>
     </div>
 </div>
+</div>
+
 <script>
 
 //Check for already subscribed
