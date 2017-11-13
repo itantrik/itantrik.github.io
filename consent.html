@@ -30,6 +30,8 @@ function callbackFunction() {
 </script>
     <title>This is a demopage!!!</title>
 <style type="text/css">
+
+
 .pushcrew-chrome-style-notification-safari {
     width: 422px;
     top: 1px;
@@ -120,22 +122,12 @@ function callbackFunction() {
     box-shadow: none !important;
     white-space: nowrap !important;
 }
-@media only screen and (max-width : 769px){
-    .pushcrew-chrome-style-notification-safari{
+
+  .pushcrew-chrome-style-notification-safari.optInMobile{
         width: 100% !important;
         left: 0 !important;
     }
-}
-
-
-
-
-
-
 </style>
-
-
-
 
 
 <!--    <style type="text/css">
@@ -168,6 +160,18 @@ function callbackFunction() {
 </head>
 <body>
     <div class="container-fluid">
+<h1>  This is just a demopage</h1>
+<h2>  for PushCrew Consent form </h2>
+<h3>  opt-in Box</h3>
+
+<h1>  This is just a demopage</h1>
+<h2>  for PushCrew Consent form </h2>
+<h3>  opt-in Box</h3>
+
+<h1>  This is just a demopage</h1>
+<h2>  for PushCrew Consent form </h2>
+<h3>  opt-in Box</h3>
+
 <h1>  This is just a demopage</h1>
 <h2>  for PushCrew Consent form </h2>
 <h3>  opt-in Box</h3>
@@ -211,7 +215,7 @@ function callbackFunction() {
 
 </script>
 -->
-<div id="pushcrew-modal" class="pushcrew-chrome-style-notification pushcrew-chrome-style-notification-safari" hidden>
+<div id="pushcrew-modal" class="pushcrew-chrome-style-notification pushcrew-chrome-style-notification-safari" >
     <div class="pushcrew-safari-notification-inner-wrapper">
         <div class="pushcrew-notification-image-wrapper-safari"><img style="height:65px; width:65px;" src="/images/timberland.png">
         </div>
@@ -244,5 +248,15 @@ function callbackFunction() {
     }
 
 </script>
+
+
+<script type="text/javascript">
+    
+    var mwidth = $(window).width();
+    if(mwidth < 990){
+        $('.pushcrew-chrome-style-notification').addClass('optInMobile');
+    }
+</script>
+
 </body>
 </html>
