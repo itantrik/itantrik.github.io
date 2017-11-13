@@ -74,11 +74,11 @@
     <h2>Click Allow to get awesome notifications from Timberland</h2>
 <div>
 <p>
-    <input type="checkbox" id="check" onchange="document.getElementById('yes').disabled = !this.checked;"><b> I agree to all the <a href="https://pushcrew.com/terms-conditions/" target="_blank">Terms & Conditions</a> </b>
+    <input type="checkbox" id="check" checked onchange="document.getElementById('yes').disabled = !this.checked;"><b> I agree to all the <a href="https://pushcrew.com/terms-conditions/" target="_blank">Terms & Conditions</a> </b>
     </p>
 <p>
 <button id="yes" type="button" class="btn btn-success" onClick="_pcq.push(['triggerOptIn']);
-    document.getElementById('myModal').style.display = 'none';" style="padding: 8px 20px;" disabled>Allow</button>
+    document.getElementById('myModal').style.display = 'none';" style="padding: 8px 20px;">Allow</button>
 </p>
 
   </div>
