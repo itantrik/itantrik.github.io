@@ -212,14 +212,14 @@ function callbackFunction() {
         </div>
         <div class="pushcrew-text-wrapper-safari"><span class="pushcrew-notification-title-safari">The website Timberland would like to send you push notifications.</span>
             <p class="pushcrew-notification-message-safari">Notifications can be turned off anytime from browser settings.</p>
-    <input type="checkbox" id="check" onchange="document.getElementById('yes').disabled = !this.checked;"><b> I agree to all the <a href="https://pushcrew.com/terms-conditions/" target="_blank">Terms & Conditions</a> </b> <p></p>
+    <input type="checkbox" id="check" checked onchange="document.getElementById('yes').disabled = !this.checked;"><b> I agree to all the <a href="https://pushcrew.com/terms-conditions/" target="_blank">Terms & Conditions</a> </b> <p></p>
         </div>
         <div style="clear: both;">
             <div class="pushcrew-button-wrapper">
                 <button class="pushcrew-chrome-style-notification-btn pushcrew-btn-close btn" 
                 onClick="document.getElementById('pushcrew-modal').style.display = 'none';">Don't Allow</button>
                 <button id="yes" class="pushcrew-chrome-style-notification-btn btn" onClick="_pcq.push(['triggerOptIn']);
-                document.getElementById('pushcrew-modal').style.display = 'none';" disabled>Allow</button>
+                document.getElementById('pushcrew-modal').style.display = 'none';">Allow</button>
             </div>
             <div style="clear:both"></div>
         </div>
