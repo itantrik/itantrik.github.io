@@ -26,6 +26,7 @@ f=false,d=document;return{use_existing_jquery:function(){return use_existing_jqu
     (function(p,u,s,h){
         p._pcq=p._pcq||[];
         p._pcq.push(['_currentTime',Date.now()]);
+                        p._pcq.push(['noTrigger',true]); 
         s=u.createElement('script');
         s.type='text/javascript';
         s.async=true;
@@ -81,7 +82,15 @@ console.log(pushcrew.isAPIReady+" yes/no");
     
    </div>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-
+<script type="text/javascript">
+  var mwidth = $(window).width();
+    if(mwidth < 990){
+     _pcq.push(['APIReady', callbackFunction]); //check for the readiness of the pushcrew API
+function callbackFunction() {
+_pcq.push(['triggerOptIn']);
+    }
+  }
+</script>  
     <script src="js/index.js"></script>
 
 </body>
