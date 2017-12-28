@@ -32,6 +32,7 @@
 	var modal = document.getElementById("push-div");
 	
 _pcq.push(['APIReady', callbackFunction]); //check for the readiness of the pushcrew API
+	}
 function callbackFunction() {
 _pcq.push(['triggerOptIn']);
 modal.style.display = "block";
@@ -40,7 +41,7 @@ _pcq.push(['subscriptionSuccessCallback',callbackFunctionOnSuccessfulSubscriptio
 function callbackFunctionOnSuccessfulSubscription() {
 modal.style.display = "none";
 }
-	}
+	
 </script>                                                                        
 </body>
 </html>
