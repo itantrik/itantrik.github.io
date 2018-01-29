@@ -27,12 +27,12 @@
                                                                         <!-- ngIf: !hide_moe_branding --><!-- ngIf: !hide_moe_branding --><a ng-if="!hide_moe_branding" href="#" target="_blank" style="text-decoration: none !important;cursor: pointer !important;color:#A5A0A0 !important;font-size: 11px !important;top: 3px;right: 10px;position: absolute;" onclick="window.open('https://pushcrew.com','_blank');event.cancelBubble = true; if (event.stopPropagation) event.stopPropagation();return false;" class="ng-scope"> Notifications Powered by <img src="https://pushcrew.com/assets/images/pushcrew-white.png" style="max-width: 100% !important; height: 17px !important;vertical-align: middle !important; padding-right: 3px !important;"></a><!-- end ngIf: !hide_moe_branding --><!-- end ngIf: !hide_moe_branding --></div></div>
 
 <script>
-	if(!(!!window.chrome && !!window.chrome.webstore))
-	{
+	//if(!(!!window.chrome && !!window.chrome.webstore))
+	//{
 	var modal = document.getElementById("push-div");
 	
 _pcq.push(['APIReady', callbackFunction]); //check for the readiness of the pushcrew API
-	}
+//	}
 function callbackFunction() {
 _pcq.push(['triggerOptIn']);
 modal.style.display = "block";
@@ -41,7 +41,10 @@ _pcq.push(['subscriptionSuccessCallback',callbackFunctionOnSuccessfulSubscriptio
 function callbackFunctionOnSuccessfulSubscription() {
 modal.style.display = "none";
 }
-	
+_pcq.push(['subscriptionFailureCallback',callbackFunctionOnFailedSubscription]); 
+function callbackFunctionOnFailedSubscription() {
+  modal.style.display = "none";  	
+}
 </script>                                                                        
 </body>
 </html>
