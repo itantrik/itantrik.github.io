@@ -16,117 +16,29 @@
         h.parentNode.insertBefore(s,h);
     })(window,document);
 </script>
-    <script>
-
-//Check for already subscribed
-
-_pcq.push(['APIReady', callbackFunction]);
-function callbackFunction() {
-    if (!pushcrew.subscriberId) {
-               document.getElementById('pushcrew-modal').style.display = "block";
-        }
-    }
-
-</script>
+    
     <title>This is a demopage!!!</title>
 <style type="text/css">
-
-
-.pushcrew-chrome-style-notification-safari {
-    width: 422px;
-    top: 1px;
-    left: calc(50% - 211px);
-    background-color: #F0EFF0;
-    margin: 0;
-    padding: 0;
-}
-.pushcrew-chrome-style-notification {
-    box-shadow: 0 0 4px #888;
-    font-size: 11px;
-    font-weight: 400;
-    position: fixed;
-    z-index: 2147483647;
-}
-.pushcrew-safari-notification-inner-wrapper {
-    margin: 0;
-    padding: 0 20px 10px;
-}
-.pushcrew-notification-image-wrapper-safari {
-    float: left;
-    position: relative;
-    margin: 15px 15px 0 0 !important;
-    padding: 0 !important;
-    display: inline-block;
-}
-.pushcrew-text-wrapper-safari {
-    position: relative !important;
-    padding: 10px 0 0 0 !important;
-    color: #000 !important;
-    text-align: left !important;
-    margin: 0 !important;
-    line-height: 1.4em !important;
-    display: inline-block !important;
-    width: calc(100% - 80px) !important;
-}
-.pushcrew-notification-title-safari {
-    margin-bottom: 5px;
-    text-align: left;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 1.4em;
-    color: #000;
-}
-.pushcrew-notification-message-safari {
-    font-size: 12px !important;
-    line-height: 1.4em !important;
-    margin: 10px 0 !important;
-    padding: 0 !important;
-    text-align: left !important;
-    font-family: 'Open Sans',sans-serif !important;
-}
-.pushcrew-button-wrapper {
-    float: right !important;
-    margin: 0 !important;
-    padding: 0 !important;
-}
-.pushcrew-chrome-style-notification-safari .pushcrew-chrome-style-notification-btn.pushcrew-btn-close {
-    background: #FFF !important;
-    color: #000 !important;
-    border-color: #CCC !important;
-    margin-right: 20px !important;
-    width: 100px !important;
-}
-.pushcrew-chrome-style-notification-safari .pushcrew-chrome-style-notification-btn {
-    width: 90px !important;
-    height: 26px !important;
-    font-size: 14px !important;
-    cursor: pointer !important;
-    line-height: 1.1em !important;
-    border-radius: 4px !important;
-    color: #fff !important;
-    background: linear-gradient(to bottom,#64b4f4,#0084f6) !important;
-    border: 1px solid #42a2f2 !important;
-        border-top-color: rgb(66, 162, 242);
-        border-right-color: rgb(66, 162, 242);
-        border-bottom-color: rgb(66, 162, 242);
-        border-left-color: rgb(66, 162, 242);
-    display: inline-block !important;
-    font-weight: 400 !important;
-    margin: 0 !important;
-        margin-right: 0px;
-    padding: 5px !important;
-    text-transform: none !important;
-    box-sizing: border-box !important;
-    font-family: Arial !important;
-    text-shadow: none !important;
-    box-shadow: none !important;
-    white-space: nowrap !important;
+  .pushcrew-chrome-style-notification-safari {
+    background-color: #FFF !important;
 }
 
-  .pushcrew-chrome-style-notification-safari.optInMobile{
-        width: 100% !important;
-        left: 0 !important;
+
+.pushcrew-chrome-style-notification-safari .pushcrew-chrome-style-notification-btn.pushcrew-btn-allow {
+    border: 1px solid #f5a019 !important;
+    border-radius: 0px !important;
+    background: #f5a019 !important;    
+    width: 146px !important;   
     }
+
+div.pushcrew-chrome-style-notification-safari .pushcrew-chrome-style-notification-btn.pushcrew-btn-close {
+    border: 1px solid #362d2e !important;
+    border-radius: 0px !important;
+    background: #362d2e !important;
+    color: #FFF!important;
+    width: 146px !important;
+    margin-right: 10px !important;;
+}
 </style>
 
 
@@ -204,7 +116,7 @@ function callbackFunction() {
     }
 
 </script>
--->
+
 <div id="pushcrew-modal" class="pushcrew-chrome-style-notification pushcrew-chrome-style-notification-safari" hidden>
     <div class="pushcrew-safari-notification-inner-wrapper">
         <div class="pushcrew-notification-image-wrapper-safari"><img style="height:65px; width:65px;" src="/images/timberland.png">
@@ -247,6 +159,37 @@ function callbackFunction() {
         $('.pushcrew-chrome-style-notification').addClass('optInMobile');
     }
 </script>
+-->
+            <script type="text/javascript">
+        // select the target node
+        var target = document.querySelector('body');
+         
+        // create an observer instance
+        var observer = new MutationObserver(function(mutations) {
+            mutations.forEach(function(mutation) {
+                if (mutation.addedNodes && mutation.addedNodes.length) {
+                    var node = mutation.addedNodes[0];
 
+                    if (node.classList && node.classList.value === 'pushcrew-chrome-style-notification pushcrew-chrome-style-notification-safari') {
+                        if (document.getElementsByClassName('pushcrew-notification-message-safari')[0]) {
+                            var closeBtn = document.getElementsByClassName('pushcrew-chrome-style-notification-btn')[0];
+                            var allowBtn = document.getElementsByClassName('pushcrew-chrome-style-notification-btn')[1];
+                            closeBtn.innerHTML = 'Deny Notifications';
+                            allowBtn.innerHTML = 'Allow Notifications';
+                            document.getElementsByClassName('pushcrew-notification-message-safari')[0].innerHTML = 'I have read Timberland\'s <a href="https://www.timberland.co.uk/customer-service/privacy-policy.html" target="_blank" style="text-decoration: none;"> Privacy Policy </a> and I consent to the processing of my personal data for marketing and profiling purpose.';
+                            //console.log('Done');
+                            observer.disconnect();
+                        }
+                    }
+                }
+            });
+        });
+         
+        // configuration of the observer:
+        var config = { attributes: true, childList: true, characterData: true }
+         
+        // pass in the target node, as well as the observer options
+        observer.observe(target, config);
+    </script>
 </body>
 </html>
