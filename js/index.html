@@ -57,6 +57,20 @@
       h.parentNode.insertBefore(s,h);
   })(window,document);
 </script>
+        <script>
+    _pcq.push(['subscriptionSuccessCallback',callbackFunctionOnSuccessfulSubscription]); //registers callback function to be called when user gets successfully subscribed
+
+function callbackFunctionOnSuccessfulSubscription() {
+    window.close();
+}
+            _pcq.push(['subscriptionFailureCallback',callbackFunctionOnFailedSubscription]); //registers callback function to be called when user gets successfully subscribed
+
+function callbackFunctionOnFailedSubscription() {
+    window.close();
+}
+            
+</script>
+        
     </head>
     <body>
         <div class="subscribe-helper-text">
