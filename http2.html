@@ -1,0 +1,39 @@
+<html>
+<head>
+<title> This is just a test </title>
+</head>
+<body>
+<div id="pushcrew-modal" class="pushcrew-chrome-style-notification pushcrew-chrome-style-notification-safari">
+    <div class="pushcrew-safari-notification-inner-wrapper">
+        <div class="pushcrew-notification-image-wrapper-safari"><img style="height:65px; width:65px;" src="/logo_192_by_192.png">
+        </div>
+        <div class="pushcrew-text-wrapper-safari"><span class="pushcrew-notification-title-safari">The website PushCrew would like to send you push notifications.</span>
+            <p class="pushcrew-notification-message-safari">Notifications can be turned off anytime from browser settings.</p>
+        </div>
+        </div>
+            <div class="pushcrew-button-wrapper">
+                <button class="pushcrew-chrome-style-notification-btn pushcrew-btn-close btn" 
+                onClick="document.getElementById('pushcrew-modal').style.display = 'none';">Don't Allow</button>
+                <button id="yes" class="pushcrew-chrome-style-notification-btn btn" onClick="_pcq.push(['triggerOptIn']);
+                document.getElementById('pushcrew-modal').style.display = 'none';" >Allow</button> 
+            </div>
+            <div style="clear:both"></div>
+        </div>
+</div>    
+</div>  
+
+ <script>
+        document.getElementById('pushcrew-modal').style.display = "none";
+//Check for already subscribed
+
+_pcq.push(['APIReady', callbackFunction]);
+function callbackFunction() {
+    if (!pushcrew.subscriberId) {
+               document.getElementById('pushcrew-modal').style.display = "block";
+        }
+    }
+
+</script>
+<h1> This is just a  PoC for redirection </h1>
+</body>
+</html>
